@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'PeerSense Documentation',
+  title: 'Documentation',
   tagline: 'All the docs you need!',
   favicon: 'img/favicon.ico',
 
@@ -48,12 +48,12 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Docs',
+        // },
         {
           href: 'https://github.com/your-org/your-repo',
           label: 'GitHub',
