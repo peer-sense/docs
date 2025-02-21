@@ -21,7 +21,7 @@ const sidebars: SidebarsConfig = {
       label: "PeerSense AI Documentation",
       collapsed: false,
       items: [
-        "getting-started",
+        "index",
         "features",
         "setup-guide",
         {
