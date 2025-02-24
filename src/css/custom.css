@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
+/* :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -15,10 +15,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +27,90 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+} */
+
+:root {
+  --ifm-color-primary: #007bff;
+  /* Primary button color (same as "Get Started" button) */
+  --ifm-color-primary-dark: #0069d9;
+  --ifm-color-primary-darker: #005cbf;
+  --ifm-color-primary-light: #3299ff;
+  --ifm-color-primary-lighter: #66b3ff;
+
+  --ifm-background-color: #000;
+  /* Dark background */
+  --ifm-navbar-background-color: #000;
+  --ifm-footer-background-color: #000;
+  --ifm-footer-color: #fff;
+
+  --ifm-font-color-base: #fff;
+  /* White text */
+  --ifm-font-color-secondary: #b0b0b0;
+  /* Light grey text */
+
+  --ifm-card-background-color: #222;
+  /* Dark grey cards */
+  --ifm-card-border-color: #333;
+  --ifm-hover-overlay: rgba(255, 255, 255, 0.05);
+  /* Light hover effect */
+}
+
+/* Make the navbar text white */
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.navbar__item {
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Modify the buttons */
+.button.button--primary {
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.button.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.button.button--secondary {
+  background-color: #333;
+  color: var(--ifm-font-color-base);
+}
+
+.button.button--secondary:hover {
+  background-color: #444;
+}
+
+/* Customize sidebar */
+.menu {
+  background-color: #111;
+}
+
+.menu__link {
+  color: var(--ifm-font-color-base);
+}
+
+.menu__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Change code blocks background */
+code {
+  background-color: #222 !important;
+}
+
+/* Force dropdown arrow color */
+.menu__list-item-collapsible>.menu__link::after {
+  filter: invert(1) !important;
+  /* Inverts color to white */
+  opacity: 1 !important;
+}
+
+/* Change dropdown arrow color when hovered */
+.menu__list-item-collapsible>.menu__link:hover::after {
+  filter: invert(64%) sepia(92%) saturate(749%) hue-rotate(190deg) brightness(95%) contrast(94%) !important;
+  /* Blue */
 }
