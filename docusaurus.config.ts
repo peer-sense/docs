@@ -7,13 +7,12 @@ const config: Config = {
   tagline: 'All the docs you need!',
   favicon: 'img/favicon.ico',
 
-  // ✅ Update these for GitHub Pages
-  url: 'https://peer-sense.github.io', // GitHub Pages URL
-  baseUrl: '/', // ✅ Changed from /docs/ to /
+  url: 'https://peer-sense.github.io',
+  baseUrl: '/docs/',  // ✅ Changed to /docs/ since the repo name is docs
   
-  organizationName: 'peer-sense', // GitHub org/user
-  projectName: 'docs', // GitHub repo name
-  deploymentBranch: 'gh-pages', // ✅ Ensure deployment goes to gh-pages
+  organizationName: 'peer-sense',
+  projectName: 'docs',
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -29,7 +28,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/', // ✅ Changed from 'docs' to '/' to serve at root
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
         },
         blog: false,
@@ -52,7 +51,7 @@ const config: Config = {
       title: 'PEER SENSE AI',
       logo: {
         alt: 'Docs Logo',
-        src: 'img/logo-ps.jpg',
+        src: '/docs/img/logo-ps.jpg',  // ✅ Updated path to include /docs/ prefix
       },
       items: [
         {
