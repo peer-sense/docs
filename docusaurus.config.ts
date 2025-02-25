@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Documentation',
   tagline: 'All the docs you need!',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo-ps.jpg',
 
   url: 'https://peer-sense.github.io',
   baseUrl: '/docs/',  // ✅ Changed to /docs/ since the repo name is docs
@@ -41,7 +41,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'docusaurus-social-card.jpg',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
