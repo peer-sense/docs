@@ -8,8 +8,8 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // ✅ Update these for GitHub Pages
-  url: 'https://peer-sense.github.io', // Replace with your GitHub username/org
-  baseUrl: '/docs/', // Replace 'docs' with your repository name
+  url: 'https://peer-sense.github.io', // GitHub Pages URL
+  baseUrl: '/docs/', // ✅ Make sure this matches your repo name & ends with /
 
   organizationName: 'peer-sense', // GitHub org/user
   projectName: 'docs', // GitHub repo name
@@ -29,11 +29,11 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/', // Makes docs the default homepage
+          routeBasePath: 'docs', // ✅ Ensures docs are served under /docs/
           sidebarPath: './sidebars.ts',
         },
-        blog: false, // Disable blog
-        pages: false, // Disable extra pages
+        blog: false,
+        pages: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -55,6 +55,13 @@ const config: Config = {
         alt: 'Docs Logo',
         src: 'img/logo.svg',
       },
+      items: [
+        {
+          href: 'https://github.com/peer-sense/docs',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
     },
     footer: {
       style: 'dark',
