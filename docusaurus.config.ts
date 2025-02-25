@@ -7,11 +7,13 @@ const config: Config = {
   tagline: 'All the docs you need!',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs.github.io',
-  baseUrl: '/',
+  // ✅ Update these for GitHub Pages
+  url: 'https://peer-sense.github.io', // Replace with your GitHub username/org
+  baseUrl: '/docs/', // Replace 'docs' with your repository name
 
-  organizationName: 'peer-sense', // Replace with your GitHub org/user
-  projectName: 'docs', // Replace with your repo name
+  organizationName: 'peer-sense', // GitHub org/user
+  projectName: 'docs', // GitHub repo name
+  deploymentBranch: 'gh-pages', // ✅ Ensure deployment goes to gh-pages
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -29,7 +31,6 @@ const config: Config = {
         docs: {
           routeBasePath: '/', // Makes docs the default homepage
           sidebarPath: './sidebars.ts',
-          // editUrl: 'https://github.com/your-org/your-repo/edit/main/docs/',
         },
         blog: false, // Disable blog
         pages: false, // Disable extra pages
@@ -43,9 +44,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      defaultMode: 'dark', // Set default mode to dark
-      disableSwitch: true, // This should remove the toggle
-      respectPrefersColorScheme: false, // Ensure it doesn't change based on system settings
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Docs',
@@ -54,20 +55,6 @@ const config: Config = {
         alt: 'Docs Logo',
         src: 'img/logo.svg',
       },
-
-      // items: [
-      //   // {
-      //   //   type: 'docSidebar',
-      //   //   sidebarId: 'tutorialSidebar',
-      //   //   position: 'left',
-      //   //   label: 'Docs',
-      //   // },
-      //   // {
-      //   //   href: 'https://github.com/your-org/your-repo',
-      //   //   label: 'GitHub',
-      //   //   position: 'right',
-      //   // },
-      // ],
     },
     footer: {
       style: 'dark',
