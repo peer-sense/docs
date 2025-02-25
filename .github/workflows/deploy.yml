@@ -5,13 +5,17 @@ on:
     branches:
       - main
 
+permissions:  # ✅ Ensures GitHub Actions has permission to push
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          fetch-depth: 0  # Required for pushing to gh-pages
 
       - name: Install dependencies
         run: npm install
@@ -22,5 +26,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # ✅ Uses built-in GitHub token
           publish_dir: ./build
+          publish_branch: gh-pages
