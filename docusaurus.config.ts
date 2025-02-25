@@ -9,7 +9,7 @@ const config: Config = {
 
   url: 'https://peer-sense.github.io',
   baseUrl: '/docs/',  // ✅ Changed to /docs/ since the repo name is docs
-  
+
   organizationName: 'peer-sense',
   projectName: 'docs',
   deploymentBranch: 'gh-pages',
@@ -53,13 +53,13 @@ const config: Config = {
         alt: 'Docs Logo',
         src: '/docs/img/logo-ps.jpg',  // ✅ Updated path to include /docs/ prefix
       },
-      items: [
-        {
-          href: 'https://github.com/peer-sense/docs',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      // items: [
+      //   {
+      //     href: 'https://github.com/peer-sense/docs',
+      //     label: 'GitHub',
+      //     position: 'right',
+      //   },
+      // ],
     },
     footer: {
       style: 'light',
