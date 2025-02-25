@@ -9,8 +9,8 @@ const config: Config = {
 
   // ✅ Update these for GitHub Pages
   url: 'https://peer-sense.github.io', // GitHub Pages URL
-  baseUrl: '/docs/', // ✅ Make sure this matches your repo name & ends with /
-
+  baseUrl: '/', // ✅ Changed from /docs/ to /
+  
   organizationName: 'peer-sense', // GitHub org/user
   projectName: 'docs', // GitHub repo name
   deploymentBranch: 'gh-pages', // ✅ Ensure deployment goes to gh-pages
@@ -29,7 +29,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: 'docs', // ✅ Ensures docs are served under /docs/
+          routeBasePath: '/', // ✅ Changed from 'docs' to '/' to serve at root
           sidebarPath: './sidebars.ts',
         },
         blog: false,
@@ -44,13 +44,12 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      defaultMode: 'dark', // ✅ Default to dark mode
-      disableSwitch: false, // ✅ Enable theme toggle
-      respectPrefersColorScheme: true, // ✅ Match system preference
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'PEER SENSE AI',
-      style: 'primary', // ✅ Light mode navbar (dark mode still works)
       logo: {
         alt: 'Docs Logo',
         src: 'img/logo-ps.jpg',

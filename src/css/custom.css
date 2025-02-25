@@ -9,8 +9,8 @@
 
   --ifm-background-color: #ffffff;
   /* Light background */
-  --ifm-navbar-background-color: #f8f9fa !important;
-  /* ✅ Light navbar */
+  --ifm-navbar-background-color: #ffffff !important;
+  /* ✅ White navbar */
   --ifm-navbar-text-color: #000000 !important;
   /* Black text */
   --ifm-footer-background-color: #f8f9fa;
@@ -41,7 +41,7 @@
   --ifm-background-color: #000000;
   /* Dark background */
   --ifm-navbar-background-color: #000000 !important;
-  /* ✅ Dark navbar */
+  /* ✅ Black navbar */
   --ifm-navbar-text-color: #ffffff !important;
   /* White text */
   --ifm-footer-background-color: #000000;
@@ -93,7 +93,7 @@
 
 /* ✅ Sidebar */
 .menu {
-  background-color: #f8f9fa;
+  background-color: var(--ifm-background-color);
 }
 
 .menu__link {
@@ -106,7 +106,7 @@
 
 /* ✅ Dark mode sidebar */
 [data-theme='dark'] .menu {
-  background-color: #111;
+  background-color: var(--ifm-background-color);
 }
 
 [data-theme='dark'] .menu__link {
