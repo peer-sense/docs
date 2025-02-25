@@ -1,52 +1,57 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-/* :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-} */
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-/* [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-} */
-
+/* ✅ Light Mode (Default) */
 :root {
   --ifm-color-primary: #007bff;
-  /* Primary button color (same as "Get Started" button) */
+  /* Primary button color */
   --ifm-color-primary-dark: #0069d9;
   --ifm-color-primary-darker: #005cbf;
   --ifm-color-primary-light: #3299ff;
   --ifm-color-primary-lighter: #66b3ff;
 
-  --ifm-background-color: #000;
-  /* Dark background */
-  --ifm-navbar-background-color: #000;
-  --ifm-footer-background-color: #000;
-  --ifm-footer-color: #fff;
+  --ifm-background-color: #ffffff;
+  /* Light background */
+  --ifm-navbar-background-color: #f8f9fa !important;
+  /* ✅ Light navbar */
+  --ifm-navbar-text-color: #000000 !important;
+  /* Black text */
+  --ifm-footer-background-color: #f8f9fa;
+  /* Light footer */
+  --ifm-footer-color: #000;
 
-  --ifm-font-color-base: #fff;
+  --ifm-font-color-base: #000;
+  /* Dark text */
+  --ifm-font-color-secondary: #333;
+  /* Gray text */
+
+  --ifm-card-background-color: #ffffff;
+  /* White cards */
+  --ifm-card-border-color: #ddd;
+  --ifm-hover-overlay: rgba(0, 0, 0, 0.05);
+  /* Light hover effect */
+}
+
+/* ✅ Dark Mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #007bff;
+  /* Primary button color */
+  --ifm-color-primary-dark: #0069d9;
+  --ifm-color-primary-darker: #005cbf;
+  --ifm-color-primary-light: #3299ff;
+  --ifm-color-primary-lighter: #66b3ff;
+
+  --ifm-background-color: #000000;
+  /* Dark background */
+  --ifm-navbar-background-color: #000000 !important;
+  /* ✅ Dark navbar */
+  --ifm-navbar-text-color: #ffffff !important;
+  /* White text */
+  --ifm-footer-background-color: #000000;
+  /* Dark footer */
+  --ifm-footer-color: #ffffff;
+
+  --ifm-font-color-base: #ffffff;
   /* White text */
   --ifm-font-color-secondary: #b0b0b0;
-  /* Light grey text */
+  /* Light gray text */
 
   --ifm-card-background-color: #222;
   /* Dark grey cards */
@@ -55,16 +60,18 @@
   /* Light hover effect */
 }
 
-/* Make the navbar text white */
+/* ✅ Navbar Styles */
 .navbar {
-  background-color: var(--ifm-navbar-background-color);
+  background-color: var(--ifm-navbar-background-color) !important;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.navbar__item {
-  color: var(--ifm-font-color-base) !important;
+.navbar__item,
+.navbar__title {
+  color: var(--ifm-navbar-text-color) !important;
 }
 
-/* Modify the buttons */
+/* ✅ Buttons */
 .button.button--primary {
   background-color: var(--ifm-color-primary);
   color: #fff;
@@ -76,17 +83,17 @@
 }
 
 .button.button--secondary {
-  background-color: #333;
+  background-color: #ddd;
   color: var(--ifm-font-color-base);
 }
 
 .button.button--secondary:hover {
-  background-color: #444;
+  background-color: #bbb;
 }
 
-/* Customize sidebar */
+/* ✅ Sidebar */
 .menu {
-  background-color: #111;
+  background-color: #f8f9fa;
 }
 
 .menu__link {
@@ -97,20 +104,50 @@
   color: var(--ifm-color-primary);
 }
 
-/* Change code blocks background */
-code {
-  background-color: #222 !important;
+/* ✅ Dark mode sidebar */
+[data-theme='dark'] .menu {
+  background-color: #111;
 }
 
-/* Force dropdown arrow color */
+[data-theme='dark'] .menu__link {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .menu__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* ✅ Code Blocks */
+code {
+  background-color: #f4f4f4 !important;
+  color: #333 !important;
+}
+
+/* ✅ Dark mode code blocks */
+[data-theme='dark'] code {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+/* ✅ Force dropdown arrow color */
 .menu__list-item-collapsible>.menu__link::after {
-  filter: invert(1) !important;
-  /* Inverts color to white */
+  filter: invert(0) !important;
+  /* Dark color in light mode */
   opacity: 1 !important;
 }
 
-/* Change dropdown arrow color when hovered */
+/* ✅ Dark mode dropdown arrow */
+[data-theme='dark'] .menu__list-item-collapsible>.menu__link::after {
+  filter: invert(1) !important;
+  /* Light color in dark mode */
+}
+
+/* ✅ Change dropdown arrow color when hovered */
 .menu__list-item-collapsible>.menu__link:hover::after {
+  filter: invert(20%) sepia(60%) saturate(749%) hue-rotate(190deg) brightness(90%) contrast(90%) !important;
+}
+
+/* ✅ Dark mode hover */
+[data-theme='dark'] .menu__list-item-collapsible>.menu__link:hover::after {
   filter: invert(64%) sepia(92%) saturate(749%) hue-rotate(190deg) brightness(95%) contrast(94%) !important;
-  /* Blue */
 }

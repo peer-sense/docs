@@ -44,16 +44,16 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      defaultMode: 'dark',
-      disableSwitch: true,
-      respectPrefersColorScheme: false,
+      defaultMode: 'dark', // ✅ Default to dark mode
+      disableSwitch: false, // ✅ Enable theme toggle
+      respectPrefersColorScheme: true, // ✅ Match system preference
     },
     navbar: {
-      title: 'Docs',
-      style: 'dark',
+      title: 'PEER SENSE AI',
+      style: 'primary', // ✅ Light mode navbar (dark mode still works)
       logo: {
         alt: 'Docs Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo-ps.jpg',
       },
       items: [
         {
@@ -64,9 +64,9 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} PeerSense Documentation.`,
+      copyright: `Copyright © ${new Date().getFullYear()} PeerSense AI.`,
     },
     prism: {
       theme: prismThemes.github,
